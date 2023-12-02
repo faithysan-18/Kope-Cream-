@@ -1,0 +1,777 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700&family=Inter:wght@200;300;400;500;600;700;800&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    
+
+}
+::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(149, 143, 132); 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 105, 30); 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(149, 143, 132);   
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* HEADER LANG */
+
+header{
+    position: fixed;
+    top: 0; left:0; right: 0;
+    background: white;
+    padding: 1 rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    z-index: 3;
+    height: 90px;
+}
+
+.logo img {
+    width: 140px;
+    float: left;
+    padding-top: 1px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+.navbar ul {
+    list-style: none;
+    padding-right: 40px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 25px;
+    font-size: 14.5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.navbar li a.active {
+    color:white;
+    background:  #f49333;
+}
+.navbar li a:hover {
+    color: #f49333;
+    background: rgb(248, 244, 244);
+}
+
+/* UNANG SECTION SA HOMEPAGE */
+
+#section01 {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 8s ease-in-out infinite 0s;
+    animation-duration: 25s;
+    z-index: 1;
+    background-image: url('Kope\ Pictures/homebg1.png')
+    
+  }
+
+  @keyframes slideBg {
+    0% {
+        background-image: url('Kope\ Pictures/homebg1.png');
+    }
+
+    35% {
+        background-image: url('Kope\ Pictures/homebg2.png');
+    }
+
+    75% {
+        background-image: url('Kope\ Pictures/homebg3.png');
+    }
+  }
+
+section {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.box-area {
+    position: relative;
+    top: 250px;
+    width: 700px;
+    height: 220px;
+    align-items: center;
+    background: #050000;
+    opacity: 50%;
+    border-radius: 10px;
+    padding: 15px 12px;
+    box-sizing: border-box;
+    
+
+}
+
+
+.content h1 {
+    font-family: 'Roboto', sans-serif;    
+    position: absolute;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+    top: 40%;
+    left:38%;
+    font-size: 60px;
+    text-shadow: 1px 1px black;
+    
+
+}
+
+.content p {
+    position: absolute;
+    font-family: 'Satisfy', cursive;
+    opacity: 100%;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left:45%;
+    font-size: 25px;
+    text-shadow: 1px 1px black;
+}
+
+.content .button-one {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    width: 120px;
+    height: 43px;
+    padding: 2px 2px;
+    text-align: center;
+    color: #ffffff;
+    left: 46%;
+    top: 57%;
+    font-size: 15px;
+}
+
+.content .button-one:hover {
+    background-color: #f49333;
+    cursor: pointer;
+    border: none;
+  
+}
+
+.box-area-two {
+    width: 100%;
+    height: 40vh;
+    background-color:  rgb(100, 87, 76);
+    z-index:1;
+    box-shadow: inset 0px 8px 6px -6px #363636;
+
+}
+
+.box-below {
+  position: relative;  
+  background-image: url(Kope\ Pictures/picture1.png);
+    opacity: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    margin-top: -282.8px;
+    margin-bottom: 0;
+    object-fit: cover;
+    overflow: hidden;
+  
+
+
+    
+}
+
+.box-below:hover {
+    opacity: 70%;
+    transition: linear 1s;
+
+}
+
+/*PANGALAWANG SECTION SA HOMEPAGE */
+
+#section02 h2 {
+    position: relative;
+    top: 87px;
+    font-size: 33px;
+    color: white;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0.5px 1px 1px black;
+    z-index: 2;
+
+
+    
+}
+
+.button-two {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background-color: #ffffff;
+    width: 120px;
+    height: 50px;
+    padding: 2px 2px;
+    top: 105px;
+    text-align: center;
+    color: #f49333;
+    font-size: 15px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .2s ease-in-out 0s;
+    z-index: 2;
+    box-shadow:
+    inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+
+}
+
+.button-two:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    background: #FFF;
+    color: #f99223;
+    font-weight: bold;
+}
+
+.box-area-three {
+    
+  width: 100%;
+    height: 40vh;
+    background-color: #f49333;
+    z-index:1;
+    box-shadow: inset 0px 8px 6px -8px #363636;
+
+
+}
+
+.box-below-two {
+    background-image: url(Kope\ Pictures/picture5.png);
+    opacity: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    margin-top: -282.9px;
+    margin-bottom: 0;
+  
+    
+}
+
+.box-below-two:hover {
+    opacity: 70%;
+    transition: linear 1s;
+}
+
+/* PANGATLONG SECTION SA HOMEPAGE */
+
+#section03 h2 {
+    position: relative;
+    top: 87px;
+    font-size: 33px;
+    color: white;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0.5px 1px 1px black;
+    z-index: 2;
+
+    
+}
+
+.button-three {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background-color: #ffffff;
+    width: 120px;
+    height: 50px;
+    padding: 2px 2px;
+    top: 105px;
+    text-align: center;
+    color: #f49333;
+    font-size: 15px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .2s ease-in-out 0s;
+    box-shadow:
+    inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+    z-index: 2;
+
+}
+
+.button-three:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    background: #FFF;
+    color: #f99223;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: white;
+    height: auto;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 25px;
+    color: black;
+    box-shadow: inset 0px 5px 6px -6px #363636;
+
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 15px;
+}
+.footer-content img {
+    width: 100px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #444444;
+}
+
+.socials a i {
+    font-size: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover {
+    color: #f99223;
+}
+
+
+.footer-bottom {
+    background-color: white;
+    width: 100vw;
+    padding-bottom: 14px;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    margin-right: 15px;
+    color: #444444;
+
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .8;
+    font-weight: 200;
+    
+}
+
+
+/* LOGIN FORM */
+
+#all {
+    display: none;
+}
+
+
+
+ 
+  .form-popup { 
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    z-index: 10;
+  }
+  .parentDisable {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    color: #aaa;
+    opacity: .4;
+    filter: alpha(opacity=50);
+}
+
+  
+ .form-one{
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    font-family: 'Roboto', sans-serif;
+    width: 400px;
+    height: 370px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:     inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+    transition: 5s ease-in-out;
+
+  }
+
+  .form-container h1 {
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color:  #363636;
+    align-items: center;
+    text-align: center;
+    margin-left:24px;
+
+  }
+
+  .form-container p {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #f99223;
+    
+  }
+
+  .form-container label {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+    color:  #363636;;
+  }
+ 
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+  
+ 
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  .form-container .btn {
+    background-color: #f99223;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 2;
+    font-weight: bold;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  p .new {
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  p .new:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+
+#close {
+    float: right;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+#close a {
+    color: #44444471;
+}
+
+#close a i {
+    font-size: 20px;
+}
+
+#close a:hover {
+    color: #f99223;
+}
+
+
+.input-box i {
+    position: absolute;
+    right: 48px;
+    top: 214px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+}
+
+/* CREATE AN ACCOUNT FORM */
+
+
+#all-two {
+    display: none;
+}
+
+
+.form-pop-up-two {
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    z-index: 9;
+}
+
+.parentDisableTwo {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    color: #aaa;
+    opacity: .4;
+    filter: alpha(opacity=50);
+}
+
+.form-two {
+    position: fixed;
+    bottom: 80px;
+    left: 530px;
+    font-family: 'Roboto', sans-serif;
+    width: 450px;
+    height: 520px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:     inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+    transition: 5s ease-in-out;
+}
+
+.form-two h1 {
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color:  #363636;
+    align-items: center;
+    text-align: center;
+    margin-left:24px;
+
+  }
+
+  .first-p {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #f99223;
+    
+  }
+
+  .form-two label {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+    color:  #363636;;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #f99223;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .registerbtn:hover {
+    opacity: 2;
+    font-weight: bold;
+  }
+  
+  /* Add a blue text color to links */
+  .second-p a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .container-signin {
+    text-align: center;
+    width: 90%;
+    height: 20px;
+    padding-top: 4px;
+    font-size: 11px;
+
+  }
+
+  .container-signin a {
+    color: dodgerblue;
+    
+  }
+
+  .container-signin a:hover {
+    color: dodgerblue;
+    font-weight: bold;
+  }
+
+  .input-box-two i   {
+    position: absolute;
+    right: 48px;
+    top: 235px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+  }
+
+  .input-box-three i   {
+    position: absolute;
+    right: 48px;
+    top: 318px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+  } 
+
+  .second-p {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #474645;
+  }
+
+#close-two {
+    float: right;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+#close-two a {
+    color: #44444471;
+}
+
+#close-two a i {
+    font-size: 20px;
+}
+
+#close-two a:hover {
+    color: #f99223;
+}

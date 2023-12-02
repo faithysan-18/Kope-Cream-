@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kope Cream </title>
+
+        <link rel="stylesheet" href="menu.css"/>        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700&family=Inter:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,500;6..12,600&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap" rel="stylesheet">        <script src="https://kit.fontawesome.com/b53697be2b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="Kope Pictures\new (3).png">
+            </div>
+            <nav tab-index="1" class="navbar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a button class="login_button" onclick="openForm()">Order Online</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main>
+            <center>
+                <div class="all forms" id="all-forms">
+                    <div id="all">
+                        <div class="form-popup" id="myForm">
+                            <form action="order.html" class="form-container">
+                                <div class="parentDisable" id="pop1"></div>
+                                <div class="form-one">
+                                    <div id="close">
+                                        <a href="#" onclick="closebtn()"><i class="fa-regular fa-circle-xmark"></i></a>
+                                    </div>
+                                    
+                                        <h1>LOGIN</h1>
+                                        <p>Log-in to Order Online</p>
+                                    <br><br>
+                                        <label for="email"><b>Email</b></label><br>
+                                        <input type="text" placeholder="Enter Email" name="email" required><br>
+                                        <div class="input-box">
+                                            <label for="psw"><b>Password</b></label><br>
+                                            <input type="password" placeholder="Enter Password" name="psw" required id="password">
+                                            <i class="fa-solid fa-eye-slash" id="eye"></i>
+                                        </div>
+                                    
+                                    
+                                        <a href="order.html"><button type="submit" class="btn">Login</button>
+                                        <p><a class="new" onclick="newAccount()">Create an Account</a></p>
+                                </div>
+    
+                            </form>
+                        </div>
+                    </div>
+    
+                    <div id="all-two">
+                        <div class="form-pop-up-two" id="accountForm">
+                            <form action="order.html" class="account-container">
+                                <div class="parentDisableTwo" id="pop2"></div> 
+                                <div class="form-two">
+                                    <div id="close-two">
+                                        <a href="#" onclick="closebtntwo()"><i class="fa-regular fa-circle-xmark"></i></a>
+                                    </div>
+    
+                                    <h1>REGISTER</h1>
+                                  <p class="first-p">Please fill in this form to create an account.</p>
+                                  <br>
+                                  <hr>
+                              
+                                  <label for="email"><b>Email</b></label><br>
+                                  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                              
+                                  <div class="input-box-two">
+                                    <label for="psw"><b>Password</b></label><br>
+                                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required id="passtwo">
+                                    <i class="fa-solid fa-eye-slash" id="eyeTwo"></i>
+                                  </div>
+                              
+                                  <div class="input-box-three">
+                                    <label for="psw-repeat"><b>Repeat Password</b></label><br>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required id="Passthree">
+                                    <i class="fa-solid fa-eye-slash" id="eyeThree"></i>
+                                  </div>
+                                  <hr>
+                              
+                                  <p class="second-p">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p><br>
+                                  <a href="order.html"><button type="submit" class="registerbtn">Register</button></a>
+                                  <div class="container-signin">
+                                    <p>Already have an account? <a href="#" onclick="loginAgain()">Sign in</a>.</p>
+                                  </div>
+    
+                                </div>
+                            </form>     
+                        </div>
+                    </div>
+                </div>
+            </center>
+
+            <div class="menu_intro">
+                <h1>Menu</h1>
+            </div>
+            <div class="line"></div>
+            
+            <center>
+                <table class="tabs">
+                    <tr> 
+                        <th class="tab is-active"><a data-switcher data-tab="1">All</a></th>
+                        <th class="tab"><a data-switcher data-tab="2">Smoothies</a></th>
+                        <th class="tab"><a data-switcher data-tab="3">Iced Coffee</a></th>
+                        <th class="tab"><a data-switcher data-tab="4">Hot Coffee</a></th>
+                        <th class="tab"><a data-switcher data-tab="5">Desserts</a></th>
+                    </tr>
+                </table>
+
+                <div class="pages">
+                    <table class="page is-active" data-page="1">
+                        <tr>
+                            <td><img src="Kope Pictures\Choconutcrush.jpeg"><br><br>
+                            <label>Choconut Crush</label><br></td>
+        
+                            <td><img src="Kope Pictures\Strawberryblossom.jpg"><br><br>
+                            <label>Strawberry Blossom</label><br></td>
+        
+                            <td><img src="Kope Pictures\Bananareviver.jpeg"><br><br>
+                                <label>Banana Reviver</label><br></td>
+        
+                            <td><img src="Kope Pictures\Apple-Spice-Smoothie.jpg"><br><br>
+                                <label>Apple Spice</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Avocado smoothies.jpg"><br><br>
+                            <label>Avocado Smooth</label><br></td>
+        
+                            <td><img src="Kope Pictures\Blueberry-Coconut-Smoothie.jpg"><br><br>
+                            <label>Blueberry Coconut</label><br></td>
+        
+                            <td><img src="Kope Pictures\Mixed berry smoothie.jpeg"><br><br>
+                                <label>Mixed Berry</label><br></td>
+        
+                            <td><img src="Kope Pictures\Black-Forest-Smoothie.jpg"><br><br>
+                                <label>Black Forest</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Matchapower.jpeg"><br><br>
+                            <label>Macha Power</label><br></td>
+        
+                            <td><img src="Kope Pictures\Caramelcappuccino.jpeg"><br><br>
+                            <label>Caramel Cappuccino</label><br></td>
+        
+                            <td><img src="Kope Pictures\Icedamericano.jpeg"><br><br>
+                                <label>Iced Americano</label><br></td>
+        
+                            <td><img src="Kope Pictures\Caramellatte.jpeg"><br><br>
+                                <label>Caramel Latte</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Icedbaraco.jpeg"><br><br>
+                                <label>Iced Baraco</label><br></td>
+        
+                            <td><img src="Kope Pictures\iced-honey-cinnamon-latte.jpg"><br><br>
+                                <label>Iced Honey Cinnamon Latte</label><br></td>
+        
+                            <td><img src="Kope Pictures\peanut-butter-ice coffee.jpg"><br><br>
+                                <label>Peanut Butter Iced Coffee</label><br></td>
+        
+                            <td><img src="Kope Pictures\cropped-iced-ube-latte.jpg"><br><br>
+                                <label>Cropped Iced Ube Latte</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Espresso.jpeg"><br><br>
+                                <label>Espresso</label><br></td>
+        
+                            <td><img src="Kope Pictures\white-hot-chocolate-.jpg"><br><br>
+                                <label>White Hot Chocolate</label><br></td>
+        
+                            <td><img src="Kope Pictures\Mexican-Hot-Chocolate.jpg"><br><br>
+                                <label>Mexican Hot Choco</label><br></td>
+        
+                            <td><img src="Kope Pictures\Americano.jpeg"><br><br>
+                                <label>Americano</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\nutella hot coffee.jpg"><br><br>
+                                <label>Nutella Hot Coffee</label><br></td>
+        
+                            <td><img src="Kope Pictures\vanilla-keto-coffee (1).jpg"><br><br>
+                                <label>Vanilla Keto Coffee</label><br></td>
+
+                            <td><img src="Kope Pictures\Vanilla-Cupcake.jpg"><br><br>
+                                <label>Vanilla Cupcake</label><br></td>
+            
+                            <td><img src="Kope Pictures\super Moist chocolate cupcakes.jpg"><br><br>
+                                <label>Moist Choco Cupcake</label><br></td>
+
+                        </tr>
+
+                        <tr>
+        
+                            <td><img src="Kope Pictures\mini cheesecakes.jpg"><br><br>
+                                <label>Mini Cheesecake</label><br></td>
+        
+                            <td><img src="Kope Pictures\marshmallow chocolate poke cake.jpg"><br><br>
+                                <label>Marshmallow Choco Poke</label><br></td>
+
+                            <td><img src="Kope Pictures\coffe cake.jpg"><br><br>
+                                <label>Coffee Cake</label><br></td>
+                
+                            <td><img src="Kope Pictures\bomboloni-italian Doughnuts.jpg"><br><br>
+                                <label>Bomboloni-Italian Doughnut</label><br></td>
+                        </tr>
+
+                        <tr>
+        
+                            <td><img src="Kope Pictures\chocolate Glazed baked donut.jpg"><br><br>
+                                <label>Chocolate Glazed Doughnut</label><br></td>
+        
+                        </tr>
+
+                    </table>
+
+                    <table class="page" data-page="2">
+                        <tr>
+                            <td><img src="Kope Pictures\Choconutcrush.jpeg"><br><br>
+                            <label>Choconut Crush</label><br></td>
+        
+                            <td><img src="Kope Pictures\Strawberryblossom.jpg"><br><br>
+                            <label>Strawberry Blossom</label><br></td>
+        
+                            <td><img src="Kope Pictures\Bananareviver.jpeg"><br><br>
+                                <label>Banana Reviver</label><br></td>
+        
+                            <td><img src="Kope Pictures\Apple-Spice-Smoothie.jpg"><br><br>
+                                <label>Apple Spice</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Avocado smoothies.jpg"><br><br>
+                            <label>Avocado Smooth</label><br></td>
+        
+                            <td><img src="Kope Pictures\Blueberry-Coconut-Smoothie.jpg"><br><br>
+                            <label>Blueberry Coconut</label><br></td>
+        
+                            <td><img src="Kope Pictures\Mixed berry smoothie.jpeg"><br><br>
+                                <label>Mixed Berry</label><br></td>
+        
+                            <td><img src="Kope Pictures\Black-Forest-Smoothie.jpg"><br><br>
+                                <label>Black Forest</label><br></td>
+                        </tr>
+
+                    </table>
+
+                    <table class="page" data-page="3">
+                        <tr>
+                            <td><img src="Kope Pictures\Matchapower.jpeg"><br><br>
+                            <label>Macha Power</label><br></td>
+        
+                            <td><img src="Kope Pictures\Caramelcappuccino.jpeg"><br><br>
+                            <label>Caramel Cappuccino</label><br></td>
+        
+                            <td><img src="Kope Pictures\Icedamericano.jpeg"><br><br>
+                                <label>Iced Americano</label><br></td>
+        
+                            <td><img src="Kope Pictures\Caramellatte.jpeg"><br><br>
+                                <label>Caramel Latte</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\Icedbaraco.jpeg"><br><br>
+                            <label>Iced Baraco</label><br></td>
+        
+                            <td><img src="Kope Pictures\iced-honey-cinnamon-latte.jpg"><br><br>
+                            <label>Iced Honey Cinnamon Latte</label><br></td>
+        
+                            <td><img src="Kope Pictures\peanut-butter-ice coffee.jpg"><br><br>
+                                <label>Peanut Butter Iced Coffee</label><br></td>
+        
+                            <td><img src="Kope Pictures\cropped-iced-ube-latte.jpg"><br><br>
+                                <label>Cropped Iced Ube Latte</label><br></td>
+                        </tr>
+
+                    </table>
+
+                    <table class="page" data-page="4">
+                        <tr>
+                            <td><img src="Kope Pictures\Espresso.jpeg"><br><br>
+                            <label>Espresso</label><br></td>
+        
+                            <td><img src="Kope Pictures\white-hot-chocolate-.jpg"><br><br>
+                            <label>White Hot Chocolate</label><br></td>
+        
+                            <td><img src="Kope Pictures\Mexican-Hot-Chocolate.jpg"><br><br>
+                                <label>Mexican Hot Choco</label><br></td>
+        
+                            <td><img src="Kope Pictures\Americano.jpeg"><br><br>
+                                <label>Americano</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\nutella hot coffee.jpg"><br><br>
+                            <label>Nutella Hot Coffee</label><br></td>
+        
+                            <td><img src="Kope Pictures\vanilla-keto-coffee (1).jpg"><br><br>
+                            <label>Vanilla Keto Coffee</label><br></td>
+                        </tr>
+
+                    </table>
+
+                    <table class="page" data-page="5">
+                        <tr>
+                            <td><img src="Kope Pictures\Vanilla-Cupcake.jpg"><br><br>
+                            <label>Vanilla Cupcake</label><br></td>
+        
+                            <td><img src="Kope Pictures\super Moist chocolate cupcakes.jpg"><br><br>
+                            <label>Moist Choco Cupcake</label><br></td>
+        
+                            <td><img src="Kope Pictures\mini cheesecakes.jpg"><br><br>
+                                <label>Mini Cheesecake</label><br></td>
+        
+                            <td><img src="Kope Pictures\marshmallow chocolate poke cake.jpg"><br><br>
+                                <label>Marshmallow Choco Poke</label><br></td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="Kope Pictures\coffe cake.jpg"><br><br>
+                            <label>Coffee Cake</label><br></td>
+        
+                            <td><img src="Kope Pictures\bomboloni-italian Doughnuts.jpg"><br><br>
+                            <label>Bomboloni-Italian Doughnut</label><br></td>
+        
+                            <td><img src="Kope Pictures\chocolate Glazed baked donut.jpg"><br><br>
+                                <label>Chocolate Glazed Doughnut</label><br></td>
+        
+                        </tr>
+
+                    </table>
+                </div>
+
+
+
+            </center>
+
+
+            
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <img src="Kope Pictures\new (6).png">
+                <ul class="socials">
+                    <li><a href="https://web.facebook.com/groups/217614311208206"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/kopecream_/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCTT25keJeKeqOasQgp6_gjw"><i class="fa-brands fa-youtube"></i></i></a></li>
+                    <li><a href="https://www.pinterest.ph/csevenheart/"><i class="fa-brands fa-pinterest"></i></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 KopeCream. designed by <span>FAITHYSAN</span></p>
+            </div>
+        </footer>
+        <script src="login.js"></script>
+        <script src="menu.js"></script>
+    </body>
+</html>

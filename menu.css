@@ -1,0 +1,633 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700&family=Inter:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,500;6..12,600&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap');*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    
+    
+    
+}
+::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(149, 143, 132); 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 105, 30); 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(149, 143, 132);   
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* HEADER LANG */
+
+header{
+    position: fixed;
+    top: 0; left:0; right: 0;
+    background: white;
+    padding: 1 rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    z-index: 3;
+    height: 90px;
+}
+
+.logo img {
+    width: 140px;
+    float: left;
+    padding-top: 1px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+.navbar ul {
+    list-style: none;
+    padding-right: 40px;
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px 25px;
+    font-size: 14.5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.navbar li a.active {
+    color:white;
+    background:  #f49333;
+}
+.navbar li a:hover {
+    color: #f49333;
+    background: rgb(248, 244, 244);
+}
+
+.menu_intro h1 {
+    font-family: 'Satisfy', cursive;
+    position: absolute;
+    top: 150px;
+    margin-left: 720px;
+    display: flex;
+    color: #262525;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.line {
+    position: relative;
+    overflow: visible; 
+    height: 50px;
+    border-style: solid;
+    border-color: rgba(33, 33, 33, 0.308);
+    border-width: 2px 0 0 0;
+    margin-top: 234px;
+    width: 1000px;
+    left: 249px;
+}
+
+
+.tabs {
+    position: relative;
+    border-collapse: collapse;
+    width: 800px;
+    align-items: center;
+}
+
+.tabs .tab {
+    padding:5px;
+    border: 0;
+
+}
+
+.tabs th a {
+  color:#262525;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.tabs .tab a [data-switcher] {
+    color:#262525;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.tabs .tab a:hover [data-switcher]{
+    color:#f49333;
+}
+
+.tabs .tab.is-active a[data-switcher]{
+  color:#f49333;
+  border-bottom: 2px solid #f49333;
+  padding: 2px;
+
+  
+}
+  
+
+.pages {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  position: relative;
+  height: auto;
+  width: 70%;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 2px 0 rgba(255,255,255,.4),
+  inset 0 0 3px 0 rgba(0,0,0,.4),
+  inset 0 0 3px 5px rgba(0,0,0,.05),
+  2px 2px 4px 0 rgba(0,0,0,.25);
+}
+
+.page {
+  position: relative;
+  border-collapse: collapse;
+  align-items: center;
+  text-align: center;
+
+}
+
+.page img {
+  width: 200px;
+  margin-top: 5px;
+  box-shadow: inset 0 0 2px 0 rgba(255,255,255,.4),
+  inset 0 0 3px 0 rgba(0,0,0,.4),
+  inset 0 0 3px 5px rgba(0,0,0,.05),
+  2px 2px 4px 0 rgba(0,0,0,.25);
+
+}
+
+.page td {
+  padding: 20px;
+}
+
+.page label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #363636;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pages .page {
+  display: none;
+}
+
+.pages .page.is-active {
+  display: block;
+}
+
+.pages .page.is-active {
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    bottom: 0;
+    background-color: #f49333;
+    height: auto;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 25px;
+    color: rgb(255, 254, 254);
+    box-shadow: inset 5px 5px -2px black;
+    
+}
+
+
+.footer-content {
+    background-color: #f49333;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.footer-content img {
+    width: 100px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.socials a i {
+    font-size: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover {
+    color:#444444;
+}
+
+.footer-bottom {
+    background-color: #f49333;
+    width: 100vw;
+    padding: 14px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #444444;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .8;
+    font-weight: 200;
+}
+
+#all {
+    display: none;
+}
+
+
+
+ 
+  .form-popup { 
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    z-index: 10;
+  }
+  .parentDisable {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    color: #aaa;
+    opacity: .4;
+    filter: alpha(opacity=50);
+}
+
+  
+ .form-one{
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    font-family: 'Roboto', sans-serif;
+    width: 400px;
+    height: 370px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:     inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+    transition: 5s ease-in-out;
+
+  }
+
+  .form-container h1 {
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color:  #363636;
+    align-items: center;
+    text-align: center;
+    margin-left:24px;
+
+  }
+
+  .form-container p {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #f99223;
+    
+  }
+
+  .form-container label {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+    color:  #363636;;
+  }
+ 
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+  
+ 
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  
+  .form-container .btn {
+    background-color: #f99223;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 2;
+    font-weight: bold;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  p .new {
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  p .new:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+
+#close {
+    float: right;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+#close a {
+    color: #44444471;
+}
+
+#close a i {
+    font-size: 20px;
+}
+
+#close a:hover {
+    color: #f99223;
+}
+
+
+.input-box i {
+    position: absolute;
+    right: 48px;
+    top: 214px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+}
+
+/* CREATE AN ACCOUNT FORM */
+
+
+#all-two {
+    display: none;
+}
+
+
+.form-pop-up-two {
+    position: fixed;
+    bottom: 150px;
+    left: 550px;
+    z-index: 9;
+}
+
+.parentDisableTwo {
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    color: #aaa;
+    opacity: .4;
+    filter: alpha(opacity=50);
+}
+
+.form-two {
+    position: fixed;
+    bottom: 80px;
+    left: 530px;
+    font-family: 'Roboto', sans-serif;
+    width: 450px;
+    height: 520px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow:     inset 0 0 2px 0 rgba(255,255,255,.4),
+    inset 0 0 3px 0 rgba(0,0,0,.4),
+    inset 0 0 3px 5px rgba(0,0,0,.05),
+    2px 2px 4px 0 rgba(0,0,0,.25);
+    transition: 5s ease-in-out;
+}
+
+.form-two h1 {
+    margin-top: 8px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color:  #363636;
+    align-items: center;
+    text-align: center;
+    margin-left:24px;
+
+  }
+
+  .first-p {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #f99223;
+    
+  }
+
+  .form-two label {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+    font-family:'Roboto', sans-serif;
+    color:  #363636;;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit/register button */
+  .registerbtn {
+    background-color: #f99223;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 15px;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .registerbtn:hover {
+    opacity: 2;
+    font-weight: bold;
+  }
+  
+  /* Add a blue text color to links */
+  .second-p a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .container-signin {
+    text-align: center;
+    width: 90%;
+    height: 20px;
+    padding-top: 4px;
+    font-size: 11px;
+
+  }
+
+  .container-signin a {
+    color: dodgerblue;
+    
+  }
+
+  .container-signin a:hover {
+    color: dodgerblue;
+    font-weight: bold;
+  }
+
+  .input-box-two i   {
+    position: absolute;
+    right: 48px;
+    top: 235px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+  }
+
+  .input-box-three i   {
+    position: absolute;
+    right: 48px;
+    top: 318px;
+    cursor: pointer;
+    color: rgb(171, 170, 170);
+    font-size: 11.5px;
+  } 
+
+  .second-p {
+    margin-top: 6px;
+    font-size: 11px;
+    color: #474645;
+  }
+
+#close-two {
+    float: right;
+    display: flex;
+    cursor: pointer;
+  }
+
+
+#close-two a {
+    color: #44444471;
+}
+
+#close-two a i {
+    font-size: 20px;
+}
+
+#close-two a:hover {
+    color: #f99223;
+}
