@@ -16,6 +16,25 @@ window.onload = () => {
     }
 }   
 
+
+var products = [
+  {
+    productId: 1,
+    productName: "Choconut Crush",
+    GRANDE: 150.00,
+    TALL: 120.00,
+    imgUrl: "Choconutcrush.jpeg"
+  },
+  {
+    productId: 2,
+    productName: "Strawberry Blossom",
+    GRANDE: 150.00,
+    TALL: 120.00,
+    imgUrl: "Strawberryblossom.jpg"
+  },
+  // Add more products as needed
+];
+
 function SwitchPage (page_id) {
     const current_page = document.querySelector('.pages .page.is-active');
     current_page.classList.remove('is-active');
@@ -23,6 +42,65 @@ function SwitchPage (page_id) {
     const next_page= document.querySelector(`.pages .page[data-page="${page_id}"]`);
     next_page.classList.add('is-active');
 }
+function Tall(id){
+    cartAppend("TALL",id);
+}
+function Grande(id){
+    cartAppend("GRANDE",id);
+}
+
+function cartAppend(size,item){
+
+    var itemHolder=document.getElementById('items');
+    var itemCode=size+item;
+    var items = "";
+    var productInfo = getProductInfo(item);
+    console.log(productInfo);
+
+    if(!itemExist(itemCode)){
+    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\Choconutcrush.jpeg' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>₱ 120.00</div><div class='quantity'><span class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span class='plus'>></span></div><div class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
+
+    	itemHolder.innerHTML+= items;
+    	console.log(items);
+    }
+    else{
+
+    	var currentQty= document.getElementById(itemCode+'_qty');
+    	var updateQty = parseInt(currentQty.innerHTML)+1;
+    	currentQty.innerHTML=updateQty;
+
+    }
+
+    
+
+    var priceInputs = document.getElementsByName('price[]');
+    for (var i = 0; i < priceInputs.length; i++) {
+  		var priceValue = priceInputs[i].innerHTML;
+  		console.log("Value of input with name 'price[]':", priceValue);
+	}
+}
+
+function itemExist(itemCode){
+	var element = document.getElementById(itemCode);
+
+	if(element){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+
+function getProductInfo(itemId){
+	for (var i = 0; i < products.length; i++) {
+
+		if (products[i].productId === itemId) {
+      		return products[i];
+    	}
+	}
+}
+
+
 
 /*const product = [
     {

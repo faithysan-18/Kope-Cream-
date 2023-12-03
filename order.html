@@ -26,26 +26,33 @@
             <div id="root"></div>
             <div class="sidebar">
                 <div class="head">My Orders</div>
-                <div id="cartItem">
-                    <div class="image">
-                        <img src="Kope Pictures\Choconutcrush.jpeg" alt="">
+                <div id = "items">
+                    <!--
+                        code below will be generated via DOM manipulation
+
+                <div id = 'itemCode' class='cartItem'>
+                    <div class='image'>
+                        <img src='Kope Pictures\Choconutcrush.jpeg' alt="">
                     </div>
-                    <div class="name">
+                    <div class='name'>
                         Choconut Crush
                     </div>
-                    <div class="totalPrice">
+                    <div id='price' class='totalPrice'>
                         ₱ 120.00
                     </div>
-                    <div class="quantity">
+                    <div id='qty' class='quantity'>
                         <span class="minus"><</span>
                         <span>1</span>
-                        <span class="plus">></span>
+                        <span class='plus'>></span>
                     </div>
-                    <div class="remove">
-                        <a><i class="fa-solid fa-trash"></i></a>
+                    <div class='remove'>
+                        <a><i class='fa-solid fa-trash'></i></a>
                     </div>
                 </div>
-    
+                -->
+
+                
+                </div>
                 <div class="foot">
                     <h3>Total</h3>
                     <h2 id="total">₱ 0.00</h2>
@@ -71,11 +78,11 @@
                 <table class="page is-active" data-page="1">
                     <tr>
                         <td><img src="Kope Pictures\Choconutcrush.jpeg"><br><br>
-                        <label id="name">Choconut Crush</label><br><button id="tall" onclick="Tall()">TALL</button><button id="grande" onclick="Grande()">GRANDE</button>
+                        <label id="name">Choconut Crush</label><br><button id="tall" onclick="Tall(1)">TALL</button><button id="grande" onclick="Grande(1)">GRANDE</button>
                         <br><label for="tall" id="price-one">₱ 120.00</label><label for="grande" id="price-two">₱ 150.00</label></td>
     
                         <td><img src="Kope Pictures\Strawberryblossom.jpg"><br><br>
-                        <label id="name">Strawberry Blossom</label><br><button id="tall" onclick="Tall()">TALL</button><button id="grande" onclick="Grande()">GRANDE</button>
+                        <label id="name">Strawberry Blossom</label><br><button id="tall" onclick="Tall(2)">TALL</button><button id="grande" onclick="Grande(2)">GRANDE</button>
                         <br><label for="tall" id="price-one">₱ 120.00</label><label for="grande" id="price-two">₱ 150.00</label></td>
 
                         <td><img src="Kope Pictures\Bananareviver.jpeg"><br><br>

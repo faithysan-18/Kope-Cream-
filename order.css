@@ -137,13 +137,13 @@ header{
 
 }
 
-#cartItem img {
+.cartItem img {
   width: 100%;
   border-radius: 100%;
 
 }
 
-#cartItem {
+.cartItem {
   display: grid;
   grid-template-columns: 50px 120px 60px 130px 5px;
   gap: 3px 4px 4px 2px 0px;
@@ -152,7 +152,7 @@ header{
   overflow: auto;
 }
 
-#cartItem .quantity span {
+.cartItem .quantity span {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -165,25 +165,25 @@ header{
 
 }
 
-#cartItem .quantity span:hover {
+.cartItem .quantity span:hover {
   background-color: #f49333;
 }
 
-#cartItem .quantity span:nth-child(2) {
+.cartItem .quantity span:nth-child(2) {
   background-color: #f7eadd;
   color: #363636;
   pointer-events: none;
 }
 
-#cartItem .quantity span:nth-child(2):hover {
+.cartItem .quantity span:nth-child(2):hover {
   background-color: #f3d9be;
   color: #363636;
 }
-#cartItem .quantity:nth-child(even) {
+ .quantity:nth-child(even) {
   background-color: white;
 }
 
-#cartItem::-webkit-scrollbar {
+.cartItem::-webkit-scrollbar {
   width: 5px;
 
   ::-webkit-scrollbar-track {
@@ -201,18 +201,18 @@ header{
   }
 }
 
-#cartItem .remove a i{
+.cartItem .remove a i{
   cursor: pointer;
 }
-#cartItem .remove a i:hover{
+.cartItem .remove a i:hover{
   color: #da740e;
 }
 
-#cartItem .name {
+.cartItem .name {
   font-size: 12px;
   font-weight: 500;
 }
-#cartItem .totalPrice {
+.cartItem .totalPrice {
   font-size: 12px;
   font-weight: bold;
 
