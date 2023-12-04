@@ -51,14 +51,31 @@ function Grande(id){
 
 function cartAppend(size,item){
 
+
+
     var itemHolder=document.getElementById('items');
     var itemCode=size+item;
     var items = "";
     var productInfo = getProductInfo(item);
-    console.log(productInfo);
+    
+    //set price
+    	switch (size){
+    		case "TALL":
+    			var price = productInfo.TALL;
+    			break;
+    		case "GRANDE":
+    			var price = productInfo.GRANDE;
+    			break;
+    		default:
+    			var price = 0;
+    			break;
+
+    	}
+    //
+
 
     if(!itemExist(itemCode)){
-    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\Choconutcrush.jpeg' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>₱ 120.00</div><div class='quantity'><span class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span class='plus'>></span></div><div class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
+    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span class='plus'>></span></div><div class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
 
     	itemHolder.innerHTML+= items;
     	console.log(items);
@@ -69,15 +86,24 @@ function cartAppend(size,item){
     	var updateQty = parseInt(currentQty.innerHTML)+1;
     	currentQty.innerHTML=updateQty;
 
+    	var cost = price*updateQty;
+    	qtyChanged(itemCode,cost);
+
+
     }
 
-    
+    var totalprice = 0;
 
     var priceInputs = document.getElementsByName('price[]');
+
     for (var i = 0; i < priceInputs.length; i++) {
   		var priceValue = priceInputs[i].innerHTML;
-  		console.log("Value of input with name 'price[]':", priceValue);
+
+  		totalprice = totalprice + parseInt(priceValue);
+
 	}
+	document.getElementById('total').innerHTML = "₱"+totalprice;
+	
 }
 
 function itemExist(itemCode){
@@ -100,7 +126,10 @@ function getProductInfo(itemId){
 	}
 }
 
-
+function qtyChanged(itemCode,cost){
+	document.getElementById(itemCode+"_price").innerHTML=cost;
+	
+}
 
 /*const product = [
     {
