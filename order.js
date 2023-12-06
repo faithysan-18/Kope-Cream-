@@ -74,7 +74,7 @@ function cartAppend(size,item){
 
 
     if(!itemExist(itemCode)){
-    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
+    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div onclick =\"removeItem('"+itemCode+"')\" class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
 
     	itemHolder.innerHTML+= items;
     	console.log(items);
@@ -84,6 +84,7 @@ function cartAppend(size,item){
     	qtyChanged("ADD",itemCode,price);
     }
 
+	
     var totalprice = 0;
 
     var priceInputs = document.getElementsByName('price[]');
@@ -95,6 +96,7 @@ function cartAppend(size,item){
 
 	}
 	document.getElementById('total').innerHTML = "₱"+totalprice;
+	document.getElementById('count').innerHTML=priceInputs.length;
 	
 }
 
@@ -109,6 +111,23 @@ function itemExist(itemCode){
 	}
 }
 
+function removeItem(itemElement){
+	
+	document.getElementById(itemElement).remove();
+
+	var totalprice = 0;
+
+    var priceInputs = document.getElementsByName('price[]');
+
+    for (var i = 0; i < priceInputs.length; i++) {
+  		var priceValue = priceInputs[i].innerHTML;
+
+  		totalprice = totalprice + parseInt(priceValue);
+
+	}
+	document.getElementById('total').innerHTML = "₱"+totalprice;
+	document.getElementById('count').innerHTML=priceInputs.length;
+}
 function getProductInfo(itemId){
 	for (var i = 0; i < products.length; i++) {
 
@@ -136,7 +155,6 @@ function qty(action,size,item){
 
     	}
 	var itemCode=size+item;
-	alert(price);
 	qtyChanged(action,itemCode,price);
 	
 }
@@ -160,8 +178,27 @@ function qtyChanged(operand,itemCode,price){
     
     currentQty.innerHTML=updateQty;
 
+    if(updateQty<1){
+    	removeItem(itemCode);
+    }
+
     var cost = price*updateQty;
     document.getElementById(itemCode+"_price").innerHTML=cost
+
+
+
+    var totalprice = 0;
+
+    var priceInputs = document.getElementsByName('price[]');
+
+    for (var i = 0; i < priceInputs.length; i++) {
+  		var priceValue = priceInputs[i].innerHTML;
+
+  		totalprice = totalprice + parseInt(priceValue);
+
+	}
+	document.getElementById('total').innerHTML = "₱"+totalprice;
+	document.getElementById('count').innerHTML=priceInputs.length;
 }
 
 /*const product = [
