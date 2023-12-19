@@ -74,7 +74,7 @@ function cartAppend(size,item){
 
 
     if(!itemExist(itemCode)){
-    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>Choconut Crush</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div onclick =\"removeItem('"+itemCode+"')\" class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
+    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>Choconut Crush</div><div class='selection'>Grande</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div onclick =\"removeItem('"+itemCode+"')\" class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
 
     	itemHolder.innerHTML+= items;
     	console.log(items);

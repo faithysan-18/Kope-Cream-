@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kope Cream | Checkout Details </title>
+
+        <link rel="stylesheet" href="checkout.css"/>        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700&family=Inter:wght@200;300;400;500;600;700;800&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b53697be2b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="Kope Pictures\new (6).png">
+            </div>
+        </header>
+
+        <center>
+            <div class="checkout-intro">
+                <i class="fa-solid fa-money-bill"></i> <h1>Checkout Details</h1>
+            </div>
+        </center>
+
+        <div class="container-for-all">
+            <div class="rows">
+                <section class="left-top-form">
+                    <div class="name-form-one">
+                        <h2>Customer Information</h2>
+                    </div>
+                    <div class="details">
+                        <div class="customer-name">
+                            <label for="fullname"><b>Full Name</b></label><br>
+                            <!--<p name="fullname" id="full-name">Faith Santos</p> --->
+                            <input class="name-input-field" name="input" value="Faith Santos" id="full-name" readonly>
+                        </div>
+        
+                        <div class="phone">
+                            <label for="phone"><b>Contact Number</b></label><br>
+                            <input type="number" placeholder="Enter 11-digit number" name="phone" required><br>
+                        </div>
+        
+                        <div class="address">
+                            <label for="address"><b>Full Address</b></label><br>
+                            <input type="text" placeholder="Apartment/House No./Street Name/Town/City/Province" name="address" required> <br>
+                        </div>
+        
+                        <div class="payment">
+                            <h2>Payment Method</h2><br>
+                                <div class="box-payment">
+                                   <!---- <ul>
+                                        <li><i class="fa-solid fa-circle-check"><p>Card</p></i></li>
+                                        <li><i class="fa-regular fa-circle"><p>Cash on Delivery</p></i></li>
+                                    </ul> -->
+
+                                    <ul>
+                                        <li><input type="radio" onclick="showdets()" class="checkbox" id="card" value="card" name="mop"><p>Card</p></li>
+                                        <li><input type="radio" onclick="unshowdets()" class="checkboxtwo" id="cod" value="cod" name="mop"><p>Cash on Delivery</p></li>
+                                    </ul>
+                                </div>
+                                <div class="details-two" id="details-two" style="display:none">
+                                    <div class="cardholder">
+                                        <label for="cardholder"><b>Cardholder Name</b></label><br>
+                                        <input type="text" placeholder="Enter Cardholder name" name="cardholder" required><br>
+                                    </div>
+                                    
+                                    <div class="cardnumber">
+                                        <label for="cardnumber"><b>Card number</b></label><br>
+                                        <input type="number" placeholder="0000-0000-0000-0000" name="cardnumber" required><br>
+                                    </div>
+
+                                    <div class="expiry">
+                                        <label for="expiry"><b>Expiration Date</b></label><br>
+                                        <input type="number" placeholder= "dd" name="expiry" required>/
+                                        <input type="number" placeholder= "mm" name="expiry" required>                                        
+                                        <label for="cvv">Cvv</label>
+                                        <input type="number" placeholder="" name="cvv" required>
+                                    </div>
+
+                                    
+
+                                </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="right-form">
+                    <div class="name-form-two">
+                        <h2>Order Summary</h2>
+                    </div>
+                    <div class="cart-list">
+                        <div class="cart-image">
+                            <img src='Kope Pictures\Choconutcrush.jpeg' alt="">
+                        </div> 
+                        <div class="cart-name">
+                            Choconut Crush
+                        </div>
+                        <div class="cart-size">
+                            Tall
+                        </div>
+                        <div class="cart-quantity"> 
+                            2pcs
+                        </div>
+                        <div class="cart-cost">
+                            ₱ 120.00
+                        </div>
+                    </div>
+                    
+    
+                    <div class="total-payment">
+                        <p>To Pay</p> <p id="totalpayment">₱ 120.00</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="button-area">
+                <div class="checkout-btn">
+                    <a href="confirmation.html"><button type="submit" class="button-confirmation">Checkout</button></a>
+                </div>
+                <div class="cancel">
+                    <a href="order.html"><p>Cancel</p></a>
+                </div>
+                
+            </div>
+        </div>
+
+        <script src="checkout.js"></script>
+    </body>
+</html>

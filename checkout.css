@@ -1,0 +1,358 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;700&family=Inter:wght@200;300;400;500;600;700;800&family=Pacifico&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .2s linear;    
+    
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px  rgb(185, 105, 30); 
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: rgb(149, 143, 132);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background:  rgb(185, 105, 30);   
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    top: 0; left:0; right: 0;
+    background: white;
+    padding: 1 rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    z-index: 2;
+    height: 80px;
+    background-color:  #f49333;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 190px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    padding-left: 20%;
+    padding-bottom: 15px;   
+}
+
+/*Checkout Intro */
+
+.checkout-intro i{
+    font-size: 40px;
+    color: #312e2eed;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 163px;
+    left: 545px;
+}
+.checkout-intro h1 {
+    font-family: 'Satisfy', cursive;
+    position: absolute;
+    left: 610px;
+    top: 150px;
+    display: flex;
+    color: #262525;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.container-for-all {
+    box-sizing: border-box;
+    position: relative;
+    width: 90%;
+    top: 180px;
+    left: 80px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    height: auto;
+    margin-bottom: 250px;
+ }
+
+.rows {
+    display: flex;
+    margin-left: 30px;
+}
+
+.left-top-form {
+    width: 60%;
+    margin-top: 40px;
+
+}
+
+.right-form {
+    width: 40%;
+    background-color: #fec184;
+    margin-right: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.name-form-one, .name-form-two {
+    border-bottom: 2px solid black;
+    width: 400px;
+    padding-bottom: 8px;
+}
+
+/* Details in Left form */
+
+.details {
+    padding-top: 20px;
+}
+
+label {
+    font-size: 15px;
+}
+
+.name-input-field {
+    cursor: default;
+    pointer-events: none;
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+
+    
+}
+
+
+input[type=text], .phone input[type=number] {
+    width: 90%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+
+
+.payment h2 {
+    border-bottom: 2px solid black;
+    width: 400px;
+    padding-bottom: 8px;
+}
+
+.box-payment {
+    display: flex;
+    margin-top: 10px;
+}
+
+.box-payment p {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    display: inline-flex;
+    padding-left: 15px;
+}
+
+.box-payment ul {
+    text-decoration: none;
+    list-style: none;
+    display: inline-flex;
+}
+
+.box-payment ul li {
+    margin-right: 50px;
+    background-color: #e2ded5;
+    padding: 15px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.box-payment .checkbox, .checkboxtwo {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Payment Method for Card */
+
+.cardholder {
+    padding-top: 20px;
+}
+
+.expiry {
+}
+.cardnumber input[type=number] {
+    
+    width: 40%;
+    font-family:'Roboto', sans-serif;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+  }
+
+.expiry input[type=number] {
+    width: 20%;
+    margin-right: 10px;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 12px 22px 0;
+    font-family:'Roboto', sans-serif;
+
+}
+
+.cvv input[type=number] {
+    width: 30%;
+    margin-right: 10px;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+    padding: 15px;
+    font-size: 14px;
+    margin: 5px 12px 22px 0;
+    font-family:'Roboto', sans-serif;
+}
+
+.cvv label {
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+/* button area */
+
+.button-area {
+    margin-top: 20px;
+    margin-left: 31px;    
+    display: flex;
+}
+.checkout-btn button {
+    background-color: #f99223;
+    color: white;
+    padding: 13px 13px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom:30px;
+    opacity: 0.8;
+    
+}
+
+.cancel {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.button-area.cancel a {
+cursor: pointer;
+text-decoration: none;
+}
+
+.button-area .cancel a p {
+    font-size: 14px;
+    color: #f49333;
+}
+
+.checkout-btn button:hover {
+    background-color: #af5b00;
+}
+
+.button-area .cancel a p:hover {
+    font-weight: 600;
+}
+
+/*right form*/
+
+.cart-list {
+    display: grid;
+    grid-template-columns: 50px 150px 50px 100px 90px;
+    gap: 5px 10px 2px 4px 4px;
+    text-align:center;
+    align-items: center;
+    overflow: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+
+.cart-list .cart-image img {
+    width: 100%;
+    border-radius: 100%;
+  
+}
+
+.cart-list .cart-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-list .cart-size {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-list .cart-quantity {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-list .cart-cost {
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.total-payment {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 2px solid rgb(255, 255, 255);
+    margin-right: 40px;
+    margin-left: -20px;
+    width: 537px;
+}
+
+.total-payment p {
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#totalpayment {
+    margin-right: 75px;
+}

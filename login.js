@@ -28,7 +28,7 @@ function loginAgain() {
 }
 
 
-  const passwordInput = document.querySelector("#password")
+const passwordInput = document.querySelector("#password")
 const eye = document.querySelector("#eye")
 
 eye.addEventListener("click", function(){
@@ -38,21 +38,21 @@ eye.addEventListener("click", function(){
   })
 
 
-  const passwordInputtwo = document.querySelector("#passtwo")
-  const eyetwo = document.querySelector("#eyeTwo")
+const passwordInputtwo = document.querySelector("#passtwo")
+const eyetwo = document.querySelector("#eyeTwo")
   
-  eyetwo.addEventListener("click", function(){
+eyetwo.addEventListener("click", function(){
       this.classList.toggle("fa-eye")
-      const type = passwordInputtwo.getAttribute("type") === "password" ? "text" : "password"
-      passwordInputwo.setAttribute("type", type)
+      const typetwo = passwordInputtwo.getAttribute("type") === "password" ? "text" : "password"
+      passwordInputtwo.setAttribute("type", typetwo)
     })
 
 
-    const passwordInputthree = document.querySelector("#passthree")
-    const eyethree = document.querySelector("#eyeThree")
+const passwordInputthree = document.querySelector("#passthree")
+const eyethree = document.querySelector("#eyeThree")
     
-    eyethree.addEventListener("click", function(){
+eyethree.addEventListener("click", function(){
         this.classList.toggle("fa-eye")
-        const type = passwordInputthree.getAttribute("type") === "password" ? "text" : "password"
-        passwordInputthree.setAttribute("type", type)
+        const typethree = passwordInputthree.getAttribute("type") === "password" ? "text" : "password"
+        passwordInputthree.setAttribute("type", typethree)
       })

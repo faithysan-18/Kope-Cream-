@@ -17,6 +17,7 @@
             <div class="logo">
                 <img src="Kope Pictures\new (6).png">
             </div>
+            <div class="current-user" id="current-user"><p>Faith Santos</p></div>
             <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p>
 
             </div>
@@ -36,6 +37,8 @@
                     </div>
                     <div class='name'>
                         Choconut Crush
+                    <div class='selection'>
+                        Grande
                     </div>
                     <div id='price' class='totalPrice'>
                         ₱ 120.00
@@ -58,10 +61,62 @@
                     <h2 id="total">₱ 0.00</h2>
                 </div>
                 <div class="check-out">
-                    <button id="check-button" onclick="checkout()">CHECKOUT</button>
+                    <a href="checkout.html"><button id="check-button">CHECKOUT</button></a>
                 </div>
             </div>
         </div>
+        
+        <!--CHECKOUT FORM
+        <div class="all forms" id="all-forms">
+            <div id="all">
+                <div class="form-popup" id="myForm">
+                    <form action="confirmation.html" class="form-container">
+                        <div class="parentDisable" id="checkout-pop-up"></div>
+                        <div class="check-out-form">
+                            <h1>CHECKOUT DETAILS</h1>
+                            <br>
+                            <br>
+                            <div class="left-container">
+                                <div class="cart-list">
+                                    <div class="cart-image">
+                                        <img src='Kope Pictures\Choconutcrush.jpeg' alt="">
+                                    </div> 
+                                    <div class="cart-name">
+                                        Choconut Crush
+                                    </div>
+                                    <div class="cart-quantity"> 
+                                        2pcs
+                                    </div>
+                                    <div class="cart-cost">
+                                        ₱ 120.00
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="right-container">
+                                <div class="details">
+                                    <label for="fullname"><b>Full Name</b></label><br>
+                                    <p name="fullname" id="full-name">Faith Santos</p>
+
+                                    <div class="phone">
+                                        <label for="phone"><b>Contact Number</b></label><br>
+                                        <input type="text" placeholder="Enter 11-digit number" name="phone" required><br>
+                                    </div>
+
+                                    <div class="address">
+                                        <label for="address"><b>Full Address</b></label><br>
+                                        <input type="text" placeholder="Apartment/House No./Street Name/Town/City/Province" name="address" required> <br>
+                                    </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    -->
 
         <section>
             <table class="tabs">
