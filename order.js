@@ -46,11 +46,7 @@ var products = [
 
 function retrieveOrder(){
     var storedOrder=JSON.parse(localStorage.getItem('order')); 
-    console.log(storedOrder);
-
-    for (var i = 0; i < storedOrder.length; i++) { 
-        order.push(storedOrder[i]);
-    }
+ 
     
 
     for (var k = 0; k < storedOrder.length; k++) {
