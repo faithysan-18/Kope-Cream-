@@ -4,7 +4,11 @@ function openForm() {
 }
 
 
-
+function login(){
+    var user=document.getElementById('username').value
+    localStorage.setItem('current_user',user);
+   
+}
 function closebtn()
   {
     document.getElementById("all").style.display='none';
