@@ -1,5 +1,11 @@
+var order = [
+
+    ]
 window.onload = () => {
+    //localStorage.clear();
     document.getElementById('current-user').innerHTML="<p>"+localStorage.getItem('current_user')+"</p>"
+
+    retrieveOrder();
     const tab_switchers = document.querySelectorAll('[data-switcher]');
 
     for (let i = 0; i < tab_switchers.length; i++) {
@@ -36,6 +42,15 @@ var products = [
   // Add more products as needed
 ];
 
+
+function retrieveOrder(){
+    var storedOrder=JSON.parse(localStorage.getItem('order')); 
+
+    for (var i = 0; i < storedOrder.length; i++) {
+        console.log(storedOrder[i]['size']);
+        cartAppend(storedOrder[i]['size'],storedOrder[i]['item'])
+    }
+}
 function SwitchPage (page_id) {
     const current_page = document.querySelector('.pages .page.is-active');
     current_page.classList.remove('is-active');
@@ -51,6 +66,16 @@ function Grande(id){
 }
 
 function cartAppend(size,item){
+
+    var itemsAdded= {
+        size: size,
+        item: item,
+        enteredBy:localStorage.getItem('current_user')
+    };
+
+    order.push(itemsAdded);
+
+
 
     var itemHolder=document.getElementById('items');
     var itemCode=size+item;
@@ -156,6 +181,7 @@ function qty(action,size,item){
 
     	}
 	var itemCode=size+item;
+    cartAppend(size,item)
 	qtyChanged(action,itemCode,price);
 	
 }
@@ -200,6 +226,10 @@ function qtyChanged(operand,itemCode,price){
 	}
 	document.getElementById('total').innerHTML = "₱"+totalprice;
 	document.getElementById('count').innerHTML=priceInputs.length;
+}
+
+function checkout(){
+    localStorage.setItem('order',JSON.stringify(order));
 }
 
 /*const product = [
