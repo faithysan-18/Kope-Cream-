@@ -45,7 +45,7 @@ var products = [
 
 function retrieveOrder(){
     var storedOrder=JSON.parse(localStorage.getItem('order')); 
-
+    console.log(storedOrder);
     for (var i = 0; i < storedOrder.length; i++) {
         console.log(storedOrder[i]['size']);
         cartAppend(storedOrder[i]['size'],storedOrder[i]['item'])
@@ -181,7 +181,25 @@ function qty(action,size,item){
 
     	}
 	var itemCode=size+item;
-    cartAppend(size,item)
+
+    switch(action){
+        case "ADD":
+            var itemsAdded= {
+            size: size,
+            item: item,
+            enteredBy:localStorage.getItem('current_user')
+        };
+
+            order.push(itemsAdded);
+            break;
+        case "SUB":
+            removeToOrders(item,size);
+           break;
+        default:
+            break;
+
+    }
+    
 	qtyChanged(action,itemCode,price);
 	
 }
@@ -230,6 +248,20 @@ function qtyChanged(operand,itemCode,price){
 
 function checkout(){
     localStorage.setItem('order',JSON.stringify(order));
+}
+
+function removeToOrders(item,size){
+    for (var i = 0; i < order.length; i++) {
+
+        if(order[i]['size']==size && order[i]['item']==item){
+            console.log("found on index " + i);
+            order.splice(i, 1);
+            break;
+        }
+
+
+        
+    }
 }
 
 /*const product = [
