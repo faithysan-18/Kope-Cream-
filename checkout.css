@@ -28,6 +28,12 @@
     background:  rgb(185, 105, 30);   
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -271,6 +277,8 @@ input[type=text], .phone input[type=number] {
     opacity: 0.8;
     
 }
+
+
 
 .cancel {
     margin-left: 20px;

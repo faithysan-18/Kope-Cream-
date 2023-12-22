@@ -40,12 +40,12 @@
         
                         <div class="phone">
                             <label for="phone"><b>Contact Number</b></label><br>
-                            <input type="number" placeholder="Enter 11-digit number" name="phone" required><br>
+                            <input type="number" placeholder="Enter 11-digit number" id="phone"  name="test_name" min="0" max="99999999999" autocomplete="off" required oninput="validity.valid||(value='');"> 
                         </div>
         
                         <div class="address">
                             <label for="address"><b>Full Address</b></label><br>
-                            <input type="text" placeholder="Apartment/House No./Street Name/Town/City/Province" name="address" required> <br>
+                            <input type="text" placeholder="Apartment/House No./Street Name/Town/City/Province" name="address" id="address" required> <br>
                         </div>
         
                         <div class="payment">
@@ -56,7 +56,7 @@
                                         <li><i class="fa-regular fa-circle"><p>Cash on Delivery</p></i></li>
                                     </ul> -->
 
-                                    <ul>
+                                    <ul id="pay">
                                         <li><input type="radio" onclick="showdets()" class="checkbox" id="card" value="card" name="mop"><p>Card</p></li>
                                         <li><input type="radio" onclick="unshowdets()" class="checkboxtwo" id="cod" value="cod" name="mop"><p>Cash on Delivery</p></li>
                                     </ul>
@@ -64,20 +64,20 @@
                                 <div class="details-two" id="details-two" style="display:none">
                                     <div class="cardholder">
                                         <label for="cardholder"><b>Cardholder Name</b></label><br>
-                                        <input type="text" placeholder="Enter Cardholder name" name="cardholder" required><br>
+                                        <input type="text" placeholder="Enter Cardholder name" name="cardholder" id="cardholder" required><br>
                                     </div>
                                     
                                     <div class="cardnumber">
                                         <label for="cardnumber"><b>Card number</b></label><br>
-                                        <input type="number" placeholder="0000-0000-0000-0000" name="cardnumber" required><br>
+                                        <input type="number" id="cardnumber" placeholder="0000-0000-0000-0000" name="cardnumber" min="0" max="9999999999999999" oninput="validity.valid||(value='');" required><br>
                                     </div>
 
-                                    <div class="expiry">
+                                    <div class="expiry" >
                                         <label for="expiry"><b>Expiration Date</b></label><br>
-                                        <input type="number" placeholder= "dd" name="expiry" required>/
-                                        <input type="number" placeholder= "mm" name="expiry" required>                                        
+                                        <input type="number"id="expiry1" placeholder= "dd" name="expiry" required>/
+                                        <input type="number" id="expiry2" placeholder= "mm" name="expiry" required>                                        
                                         <label for="cvv">Cvv</label>
-                                        <input type="number" placeholder="" name="cvv" required>
+                                        <input type="number" id="expiry3" placeholder="" name="cvv" required>
                                     </div>
 
                                     
@@ -119,7 +119,7 @@
 
             <div class="button-area">
                 <div class="checkout-btn">
-                    <a href="confirmation.html"><button type="submit" class="button-confirmation">Checkout</button></a>
+                    <a href="confirmation.html"><button type="submit" id="btn"  class="button-confirmation">Checkout</button></a>
                 </div>
                 <div class="cancel">
                     <a href="order.html"><p>Cancel</p></a>
