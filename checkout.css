@@ -124,7 +124,9 @@ h2 {
     border-bottom: 2px solid black;
     width: 400px;
     padding-bottom: 8px;
+
 }
+
 
 /* Details in Left form */
 
@@ -267,7 +269,7 @@ input[type=text], .phone input[type=number] {
     cursor: pointer;
     width: 100%;
     font-size: 15px;
-    margin-bottom:30px;
+    margin-bottom:50px;
     opacity: 0.8;
     
 }
@@ -296,10 +298,29 @@ text-decoration: none;
 
 /*right form*/
 
+.right-form {
+    box-shadow: 1px 2px 6px 0px #262525;
+
+}
+
+.scroll-part {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 540px;
+    margin-right: 10px;
+    border-radius: 8px;
+    ;
+}
+
+.scroll-part::-webkit-scrollbar {
+    width: 4px;
+}
 .cart-list {
     display: grid;
-    grid-template-columns: 50px 150px 50px 100px 90px;
-    gap: 5px 10px 2px 4px 4px;
+    grid-template-columns: 50px 110px 100px 100px 90px;  
+    column-gap: 20px;
+    row-gap: 5px;
+    column-gap:5px ;
     text-align:center;
     align-items: center;
     overflow: auto;
@@ -331,6 +352,7 @@ text-decoration: none;
 
 .cart-list .cart-cost {
     background-color: white;
+    box-shadow: 2px 2px#262525 ;
     padding: 5px;
     border-radius: 20px;
     font-size: 14px;
@@ -338,10 +360,13 @@ text-decoration: none;
 }
 
 .total-payment {
+    position: absolute;
+    left: 830px;
+    margin-top: 600px;
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    border-top: 2px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(0, 0, 0);
     margin-right: 40px;
     margin-left: -20px;
     width: 537px;
@@ -351,6 +376,7 @@ text-decoration: none;
     margin-left: 15px;
     font-size: 15px;
     font-weight: bold;
+    
 }
 
 #totalpayment {
