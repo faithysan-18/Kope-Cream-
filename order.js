@@ -6,6 +6,7 @@ window.onload = () => {
     document.getElementById('current-user').innerHTML="<p>"+localStorage.getItem('current_user')+"</p>"
 
     retrieveOrder();
+    
     const tab_switchers = document.querySelectorAll('[data-switcher]');
 
     for (let i = 0; i < tab_switchers.length; i++) {
@@ -46,11 +47,21 @@ var products = [
 function retrieveOrder(){
     var storedOrder=JSON.parse(localStorage.getItem('order')); 
     console.log(storedOrder);
-    for (var i = 0; i < storedOrder.length; i++) {
-        console.log(storedOrder[i]['size']);
-        cartAppend(storedOrder[i]['size'],storedOrder[i]['item'])
+
+    for (var i = 0; i < storedOrder.length; i++) { 
+        order.push(storedOrder[i]);
+    }
+    
+
+    for (var k = 0; k < storedOrder.length; k++) {
+        
+        
+        if(storedOrder[k]['enteredBy']==localStorage.getItem('current_user')){
+          cartAppend(storedOrder[k]['size'],storedOrder[k]['item']);  
+        }
     }
 }
+
 function SwitchPage (page_id) {
     const current_page = document.querySelector('.pages .page.is-active');
     current_page.classList.remove('is-active');
