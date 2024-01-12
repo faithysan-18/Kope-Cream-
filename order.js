@@ -422,6 +422,7 @@ function qty(action,size,item){
 }
 
 
+
 function qtyChanged(operand,itemCode,price){
 	var currentQty= document.getElementById(itemCode+'_qty');
 	switch(operand){
@@ -465,6 +466,8 @@ function qtyChanged(operand,itemCode,price){
 
 function checkout(){
     localStorage.setItem('order',JSON.stringify(order));
+
+    
 }
 
 function removeToOrders(item,size){
@@ -480,6 +483,7 @@ function removeToOrders(item,size){
         
     }
 }
+
 
 
 

@@ -129,22 +129,22 @@ header{
 }
 
 
-.content pre {
+.content p {
+  width: 600px;
     font-family: 'Inter', sans-serif;
     position: absolute;
     display: flex;
     color: #262525;
     align-items: center;
     text-align: center;
-    margin-top: 18%;
-    margin-left: 10px;
+    margin-top: 19%;
+    margin-left: 80px;
     float: left;
     font-size: 15px;
-    text-align: justify;}
+    text-align: justify;
+  }
 
-.content pre span {
-  color: #f99223;
-}
+
 footer {
     position: absolute;
     bottom: 0;

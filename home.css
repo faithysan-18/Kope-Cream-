@@ -127,6 +127,7 @@ section {
     margin: 0;
     padding: 0;
     overflow: auto;
+    overflow: hidden;
 }
 
 .box-area {

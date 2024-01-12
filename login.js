@@ -31,6 +31,11 @@ function loginAgain() {
     document.getElementById("all-two").style.display='none';
 }
 
+function confirmLogin() {
+  document.getElementById("all").style.display='block';
+  document.getElementById("all-two").style.display='none';
+}
+
 
 const passwordInput = document.querySelector("#password")
 const eye = document.querySelector("#eye")
@@ -52,7 +57,7 @@ eyetwo.addEventListener("click", function(){
     })
 
 
-const passwordInputthree = document.querySelector("#passthree")
+const passwordInputthree = document.querySelector("#psw-repeat")
 const eyethree = document.querySelector("#eyeThree")
     
 eyethree.addEventListener("click", function(){
@@ -60,3 +65,14 @@ eyethree.addEventListener("click", function(){
         const typethree = passwordInputthree.getAttribute("type") === "password" ? "text" : "password"
         passwordInputthree.setAttribute("type", typethree)
       })
+
+
+      function validateForm() {
+        const password = document.getElementById('passtwo').value;
+        const confirmPassword = document.getElementById('psw-repeat').value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false;
+        }
+      }
