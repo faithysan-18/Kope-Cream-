@@ -163,8 +163,14 @@ input[type=text], .phone input[type=number] {
     border: none;
     background: #f1f1f1;
     height: 40px;
+
   }
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
 
 .payment h2 {
     border-bottom: 2px solid black;
@@ -300,6 +306,7 @@ text-decoration: none;
 
 .right-form {
     box-shadow: 1px 2px 6px 0px #262525;
+    max-height: 600px;
 
 }
 
@@ -309,7 +316,7 @@ text-decoration: none;
     max-height: 540px;
     margin-right: 10px;
     border-radius: 8px;
-    ;
+    
 }
 
 .scroll-part::-webkit-scrollbar {
@@ -360,25 +367,29 @@ text-decoration: none;
 }
 
 .total-payment {
-    position: absolute;
+    display: flex;
     left: 830px;
-    margin-top: 600px;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 9px;
     border-top: 2px solid rgb(0, 0, 0);
     margin-right: 40px;
     margin-left: -20px;
     width: 537px;
+    margin-bottom: 20px;
 }
 
 .total-payment p {
     margin-left: 15px;
     font-size: 15px;
     font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     
 }
 
 #totalpayment {
     margin-right: 75px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
