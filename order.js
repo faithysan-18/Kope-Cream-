@@ -467,7 +467,6 @@ function qtyChanged(operand,itemCode,price){
 function checkout(){
     localStorage.setItem('order',JSON.stringify(order));
 
-    
 }
 
 function removeToOrders(item,size){

@@ -31,10 +31,6 @@ function loginAgain() {
     document.getElementById("all-two").style.display='none';
 }
 
-function confirmLogin() {
-  document.getElementById("all").style.display='block';
-  document.getElementById("all-two").style.display='none';
-}
 
 
 const passwordInput = document.querySelector("#password")
