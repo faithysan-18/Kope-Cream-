@@ -9,6 +9,12 @@ function login(){
     localStorage.setItem('current_user',user);
    
 }
+function login2(){
+    var user=document.getElementById('username2').value
+    //alert(user);
+    localStorage.setItem('current_user',user);
+   
+}
 function closebtn()
   {
     document.getElementById("all").style.display='none';

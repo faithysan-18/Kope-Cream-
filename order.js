@@ -311,7 +311,7 @@ function cartAppend(size,item){
 
 
     if(!itemExist(itemCode)){
-    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>"+productInfo.productName+"</div><div class='selection'>"+size+"</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div onclick =\"removeItem('"+itemCode+"')\" class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
+    	 items += "<div id = '"+itemCode+"' class='cartItem'><div class='image'><img src='Kope Pictures\\"+productInfo.imgUrl+"' alt=''></div><div class='name'>"+productInfo.productName+"</div><div class='selection'>"+size+"</div><div id='"+itemCode+"_price' class='totalPrice' name='price[]'>"+price+"</div><div class='quantity'><span onclick=\"qty('SUB','"+size+"',"+item+")\" class='minus'><</span><span id='"+itemCode+"_qty'>1</span><span onclick=\"qty('ADD','"+size+"',"+item+")\"  class='plus'>></span></div><div onclick =\"removeItem('"+size+"',"+item+")\" class='remove'><a><i class='fa-solid fa-trash'></i></a></div></div>";
 
     	itemHolder.innerHTML+= items;
     	console.log(items);
@@ -348,7 +348,9 @@ function itemExist(itemCode){
 	}
 }
 
-function removeItem(itemElement){
+function removeItem(size,itemNo){
+
+    var itemElement=size+itemNo;
 	
 	document.getElementById(itemElement).remove();
 
@@ -364,6 +366,16 @@ function removeItem(itemElement){
 	}
 	document.getElementById('total').innerHTML = "₱"+totalprice;
 	document.getElementById('count').innerHTML=priceInputs.length;
+
+    console.log(order);
+
+    var newArray = order.filter(function(item) {
+        return !(item.size === size && item.item === parseInt(itemNo));
+    });
+    console.log(newArray);
+    order = newArray;
+
+    localStorage.setItem('order',JSON.stringify(order)); 
 }
 function getProductInfo(itemId){
 	for (var i = 0; i < products.length; i++) {
@@ -465,7 +477,15 @@ function qtyChanged(operand,itemCode,price){
 }
 
 function checkout(){
-    localStorage.setItem('order',JSON.stringify(order));
+    
+
+    if(!order.length){
+        alert("cart is empty");
+    }
+    else{
+       localStorage.setItem('order',JSON.stringify(order)); 
+       window.location.href="checkout.html";
+    }
 
 }
 
