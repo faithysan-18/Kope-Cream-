@@ -141,8 +141,6 @@ section {
     border-radius: 10px;
     padding: 15px 12px;
     box-sizing: border-box;
-    
-
 }
 
 
@@ -157,8 +155,6 @@ section {
     left:38%;
     font-size: 60px;
     text-shadow: 1px 1px black;
-    
-
 }
 
 .content p {
@@ -219,17 +215,12 @@ section {
     margin-top: -282.8px;
     margin-bottom: 0;
     object-fit: cover;
-    overflow: hidden;
-  
-
-
-    
+    overflow: hidden;    
 }
 
 .box-below:hover {
     opacity: 70%;
     transition: linear 1s;
-
 }
 
 /*PANGALAWANG SECTION SA HOMEPAGE */
@@ -288,8 +279,6 @@ section {
     background-color: #f49333;
     z-index:1;
     box-shadow: inset 0px 8px 6px -8px #363636;
-
-
 }
 
 .box-below-two {
@@ -303,8 +292,6 @@ section {
     position: relative;
     margin-top: -282.9px;
     margin-bottom: 0;
-  
-    
 }
 
 .box-below-two:hover {
@@ -411,14 +398,12 @@ footer {
     color: #f99223;
 }
 
-
 .footer-bottom {
     background-color: white;
     width: 100vw;
     padding-bottom: 14px;
     padding-top: 10px;
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .footer-bottom p {
@@ -427,14 +412,12 @@ footer {
     text-transform: capitalize;
     margin-right: 15px;
     color: #444444;
-
 }
 
 .footer-bottom span {
     text-transform: uppercase;
     opacity: .8;
-    font-weight: 200;
-    
+    font-weight: 200;    
 }
 
 
@@ -444,9 +427,6 @@ footer {
     display: none;
 }
 
-
-
- 
   .form-popup { 
     position: fixed;
     bottom: 150px;
@@ -464,7 +444,6 @@ footer {
     opacity: .4;
     filter: alpha(opacity=50);
 }
-
   
  .form-one{
     position: fixed;
@@ -481,7 +460,6 @@ footer {
     inset 0 0 3px 5px rgba(0,0,0,.05),
     2px 2px 4px 0 rgba(0,0,0,.25);
     transition: 5s ease-in-out;
-
   }
 
   .form-container h1 {
@@ -524,12 +502,10 @@ footer {
     height: 40px;
   }
   
- 
   .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
   }
-  
   
   .form-container .btn {
     background-color: #f99223;
@@ -542,8 +518,6 @@ footer {
     margin-bottom:10px;
     opacity: 0.8;
   }
-  
-  
   
   .form-container .btn:hover, .open-button:hover {
     opacity: 2;
@@ -597,11 +571,9 @@ footer {
 
 /* CREATE AN ACCOUNT FORM */
 
-
 #all-two {
     display: none;
 }
-
 
 .form-pop-up-two {
     position: fixed;
