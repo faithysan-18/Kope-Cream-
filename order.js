@@ -334,6 +334,7 @@ function cartAppend(size,item){
 	}
 	document.getElementById('total').innerHTML = "₱"+totalprice;
 	document.getElementById('count').innerHTML=priceInputs.length;
+    localStorage.setItem('order',JSON.stringify(order)); 
 	
 }
 
